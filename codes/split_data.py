@@ -13,9 +13,9 @@ def get_args():
     parser = argparse.ArgumentParser(description="Training")
     parser.add_argument(
         '--src_root',
-        '-d',
+        '-s',
         type=str,
-        default='../data/original_train',
+        default='../datas/original_train',
         help='the path of source root'
     )
     parser.add_argument(
@@ -71,7 +71,7 @@ def split_and_move(src_root, dst_root, valid_ratio=0.2, seed=42):
 
                 # source path
                 degraded_src = os.path.join(src_root, "degraded", degraded_name)
-                clean_src = os.path.join(src_root, "clear", clean_name)
+                clean_src = os.path.join(src_root, "clean", clean_name)
 
                 # destination path
                 degraded_dst = os.path.join(dst_root, split, 'degraded', degraded_name)

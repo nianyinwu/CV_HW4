@@ -27,14 +27,14 @@ pip install einops
 
 ```
 
-3. Dataset
-```shell
-Create a folder named datas and put decompress data to this folder
-Rename the test-release folder to test
-```
+
 
 ## Split the dataset
 (need to modify data path in split_data.py)
+```shell
+Rename the hw4_realse folder to datas
+Rename the train folder to original_train
+```
 ```shell
 cd codes
 python3 split_data.py 
