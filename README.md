@@ -53,8 +53,17 @@ cd codes
 python3 inference.py -d <data path> -w <the path of model checkpoints> -s <save path>
 ```
 ## Visulize the result of different experiment
-1. PromptIR with dual-loss training objective (Baseline)
+### 1. PromptIR with dual-loss training objective (Baseline)
 ![image](https://github.com/nianyinwu/CV_HW4/blob/main/result/exp1.png)
+
+### 2. Baseline with CBAM module
+![image](https://github.com/nianyinwu/CV_HW4/blob/main/result/exp2.png)
+
+### 3. Modify (2) model’s decoder blocks number to fine-tune with epoch 20
+![image](https://github.com/nianyinwu/CV_HW4/blob/main/result/exp3.png)
+
+### 4. Based on (3) modified the number of refinement blocks and train from scratch
+![image](https://github.com/nianyinwu/CV_HW4/blob/main/result/exp4.png)
 
 ## Performance snapshot
 ![image](https://github.com/nianyinwu/CV_HW4/blob/main/result/snapshot.png)
