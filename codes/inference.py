@@ -1,13 +1,11 @@
 """ Inference script for Image Restoration Model """
 
-import os
 import argparse
 import warnings
 from typing import List, Tuple
 import numpy as np
 from tqdm import tqdm
 from utils import tqdm_bar
-from PIL import Image 
 
 import torch
 from model import PromptIR
@@ -94,10 +92,6 @@ def img2npz(save_path: str, predictions: List[Tuple[str, torch.Tensor]]) -> None
         # Convert tensor to numpy array
         clean_img = clean_img.clamp(0, 1).mul(255).byte().cpu().numpy()
         images_dict[fname] = clean_img
-
-        img_pil = Image.fromarray(clean_img.squeeze())  # squeeze() 給灰階單通道用
-        img_pil.save(os.path.join("./tmp/", f"{fname}.png"))
-
 
     # Save to .npz file
     np.savez(f"{save_path}/pred.npz", **images_dict)
