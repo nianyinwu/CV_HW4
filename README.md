@@ -52,7 +52,7 @@ The predicted results (pred.npz) will be saved in the argument of save path.
 cd codes
 python3 inference.py -d <data path> -w <the path of model checkpoints> -s <save path>
 ```
-## Visulize the result of different experiment
+## Visualize the result of different experiment
 ### 1. PromptIR with dual-loss training objective (Baseline)
 ![image](https://github.com/nianyinwu/CV_HW4/blob/main/result/exp1.png)
 
